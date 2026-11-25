@@ -1,0 +1,3 @@
+This is the curve y equals x squared. The horizontal axis is input x; the vertical axis is output y. Both highlighted points lie on the curve. The secant line joins them, and its slope is the change in height divided by the change in horizontal position: f of b minus f of a, over b minus a. That is the average rate between the inputs.
+
+Now the pink point moves toward the gold point. The interval shrinks and the secant pivots. As it approaches the gold point, the secant lines approach a tangent line. A tangent captures the curve's direction at one point. This shrinking interval is the bridge from average change to change at a single instant.

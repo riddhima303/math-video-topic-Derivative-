@@ -1,0 +1,26 @@
+from scenes.common import *
+class Scene3Visual(LectureScene):
+    def construct(self):
+        self.start_voice(3)
+        self.header('03 · Visual intuition','A secant becomes a tangent')
+        ax=Axes(x_range=[0,4,1],y_range=[0,9,2],x_length=7,y_length=4.3,axis_config={'color':MUTED,'include_tip':True}).shift(DOWN*.35+LEFT*.65)
+        xlab=ax.get_x_axis_label(Text('x',color=INK)); ylab=ax.get_y_axis_label(Text('y',color=INK))
+        curve=ax.plot(lambda x:x*x,x_range=[0,3],color=CYAN,stroke_width=5)
+        cap=Text('curve:  y = x²',font_size=22,color=CYAN).to_corner(UR,buff=.55)
+        a=1.0; b=3.0; p=ax.c2p(a,a*a); q=ax.c2p(b,b*b)
+        dot1=Dot(p,color=GOLD,radius=.09); dot2=Dot(q,color=PINK,radius=.09)
+        sec=Line(p,q,color=PINK,stroke_width=3)
+        ptxt=Text('A',font_size=19,color=GOLD,weight=BOLD).next_to(dot1,LEFT,buff=.08)
+        qtxt=Text('B',font_size=19,color=PINK,weight=BOLD).next_to(dot2,RIGHT,buff=.08)
+        slope=Text('Secant slope = [f(b) - f(a)] / (b - a)',font_size=25,color=INK).to_edge(DOWN,buff=.35)
+        self.play(Create(ax),Write(xlab),Write(ylab),Create(curve),FadeIn(cap),run_time=2)
+        self.wait(10)
+        self.play(FadeIn(dot1,scale=.6),FadeIn(dot2,scale=.6),Create(sec),Write(ptxt),Write(qtxt),run_time=1.5)
+        self.play(Write(slope),run_time=1); self.wait(5)
+        for new_b in [2.3,1.6,1.12]:
+            nq=ax.c2p(new_b,new_b*new_b)
+            self.play(dot2.animate.move_to(nq),sec.animate.put_start_and_end_on(p,nq),qtxt.animate.next_to(nq,RIGHT,buff=.1),run_time=2,rate_func=smooth); self.wait(3)
+        tangent=ax.plot(lambda x:2*a*x-a*a,x_range=[.15,2.2],color=GREEN,stroke_width=4)
+        tlabel=Text('tangent: the limiting secant',font_size=22,color=GREEN).next_to(slope,UP,buff=.12)
+        self.play(Transform(sec,tangent),FadeIn(tlabel),run_time=1.4); self.wait(2)
+        self.finish_voice(3)

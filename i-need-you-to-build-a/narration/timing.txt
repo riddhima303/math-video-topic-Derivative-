@@ -1,0 +1,1 @@
+Exact audio runtime: 05:18. Voice: en-US-JennyNeural. Timestamps in full_script.txt are measured from generated scene clips.

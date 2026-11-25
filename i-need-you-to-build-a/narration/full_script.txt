@@ -1,0 +1,31 @@
+DERIVATIVE AND RATE OF CHANGE
+Complete narration with synchronized audio timestamps
+Voice: en-US-JennyNeural (AI text-to-speech; disclosed in credits)
+
+SCENE 1  [00:00 - 00:31]
+Imagine riding in a car as its speedometer climbs. It may show seventy two kilometres per hour, but how quickly is the speed changing right now? One reading tells us speed at an instant; comparing readings over time tells us whether the car is accelerating. Calculus gives us a precise way to describe change at an instant: the derivative. We will build it from average change, see a secant line approach a tangent, then calculate a derivative step by step.
+
+SCENE 2  [00:31 - 01:17]
+A function is a rule that turns an input into an output. Here f of x equals x squared. Put in two, square it, and the output is four: f of two equals four.
+
+If the input changes from a to b, the output changes from f of a to f of b. Average rate of change is output change divided by input change: f of b minus f of a, over b minus a. The numerator is the vertical change; the denominator is the horizontal change. Their ratio is the slope between the two points. So a and b are the starting and ending inputs, while f of a and f of b are their outputs. This describes change across an interval, not at one instant.
+
+SCENE 3  [01:17 - 02:04]
+This is the curve y equals x squared. The horizontal axis is input x; the vertical axis is output y. Both highlighted points lie on the curve. The secant line joins them, and its slope is the change in height divided by the change in horizontal position: f of b minus f of a, over b minus a. That is the average rate between the inputs.
+
+Now the pink point moves toward the gold point. The interval shrinks and the secant pivots. As it approaches the gold point, the secant lines approach a tangent line. A tangent captures the curve's direction at one point. This shrinking interval is the bridge from average change to change at a single instant.
+
+SCENE 4  [02:04 - 02:56]
+The derivative definition describes that shrinking process. The prime in f prime of x means the instantaneous rate of change at input x. The letter h is a small step in the input: we move from x to the nearby input x plus h. The output change is f of x plus h minus f of x. Divide by h, the input change, and we have a secant slope.
+
+The limit as h approaches zero asks what that slope approaches as the step gets smaller. We do not set h to zero in the fraction, because that would divide by zero. Instead, we examine nonzero steps as close to zero as we like. If the slopes approach a value, that value is the tangent slope, or f prime of x. The green tangent shows the curve's instantaneous rise at the marked input.
+
+SCENE 5  [02:56 - 04:29]
+Take f of x equals x squared. First find the average rate from two to four. Substitute into the formula: f of four minus f of two, divided by four minus two. Squaring the inputs gives sixteen minus four over two. That is twelve divided by two, or six. The secant slope is six output units per input unit.
+
+Now apply the limit definition at a general x. Replace f of x plus h with x plus h squared, and f of x with x squared. Expand: x squared plus two x h plus h squared, then subtract x squared. Those matching terms cancel. The numerator is two x h plus h squared. Factor out h to get h times two x plus h. Divide by h; for nonzero h, the h cancels, leaving two x plus h. As h approaches zero, the remaining h disappears. Therefore f prime of x equals two x.
+
+At x equals two, substitute: two times two equals four. The tangent slope is four. The graph compares the answers: the secant from two to four has slope six; the tangent at two has slope four. Its equation is y equals four x minus four, and it touches the parabola at the point two, four. The derivative value describes the tangent's steepness right there.
+
+SCENE 6  [04:29 - 05:18]
+Average rate compares two inputs: it is the secant slope across an interval. Instantaneous rate focuses on one input: it is the tangent slope there. Shrinking the interval and taking a limit connects the two. For x squared, the average rate from two to four is six, while the derivative is two x and its value at two is four. Both are slopes, answering different questions. Thanks for learning with us. References: OpenStax Calculus, Volume One, section 3.1; Stewart's Calculus, eighth edition, section 2.1. AI disclosure: Apple's built-in text-to-speech was selected for the narration; the teaching script and animation source were authored for this project.

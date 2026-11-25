@@ -1,0 +1,5 @@
+Take f of x equals x squared. First find the average rate from two to four. Substitute into the formula: f of four minus f of two, divided by four minus two. Squaring the inputs gives sixteen minus four over two. That is twelve divided by two, or six. The secant slope is six output units per input unit.
+
+Now apply the limit definition at a general x. Replace f of x plus h with x plus h squared, and f of x with x squared. Expand: x squared plus two x h plus h squared, then subtract x squared. Those matching terms cancel. The numerator is two x h plus h squared. Factor out h to get h times two x plus h. Divide by h; for nonzero h, the h cancels, leaving two x plus h. As h approaches zero, the remaining h disappears. Therefore f prime of x equals two x.
+
+At x equals two, substitute: two times two equals four. The tangent slope is four. The graph compares the answers: the secant from two to four has slope six; the tangent at two has slope four. Its equation is y equals four x minus four, and it touches the parabola at the point two, four. The derivative value describes the tangent's steepness right there.

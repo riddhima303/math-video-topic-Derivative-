@@ -1,0 +1,21 @@
+from scenes.common import *
+class Scene2Basics(LectureScene):
+    def construct(self):
+        self.start_voice(2)
+        self.header('02 · Basic concepts','From input to average change')
+        box=RoundedRectangle(width=2.0,height=1.0,corner_radius=.12,stroke_color=CYAN,stroke_width=3).move_to(LEFT*4+UP*.4)
+        fx=Text('f(x) = x²',color=INK,font_size=40).move_to(box)
+        inp=Text('x = 2',color=GOLD,font_size=32).next_to(box,LEFT,buff=.6)
+        out=Text('f(2) = 4',color=GREEN,font_size=32).next_to(box,RIGHT,buff=.6)
+        arrow1=Arrow(inp.get_right(),box.get_left(),color=GOLD,buff=.15); arrow2=Arrow(box.get_right(),out.get_left(),color=GREEN,buff=.15)
+        note=Text('A function is a rule: input goes in, output comes out.',font_size=22,color=MUTED).move_to(DOWN*1.0)
+        self.play(Write(inp),GrowArrow(arrow1),FadeIn(box),Write(fx),GrowArrow(arrow2),Write(out),run_time=2)
+        self.play(FadeIn(note)); self.wait(2)
+        self.play(FadeOut(VGroup(box,fx,inp,out,arrow1,arrow2,note)),run_time=.5)
+        formula=Text('Average rate = [f(b) - f(a)] / (b - a)',font_size=34,color=INK).move_to(UP*.65)
+        hi=SurroundingRectangle(formula,color=CYAN,buff=.12)
+        desc1=Text('change in output',font_size=22,color=CYAN).next_to(formula,DOWN,buff=.42).shift(LEFT*2.3)
+        desc2=Text('change in input',font_size=22,color=GOLD).next_to(formula,DOWN,buff=.42).shift(RIGHT*2.5)
+        desc3=Text('a and b are the two input values; f(a) and f(b) are their outputs.',font_size=22,color=MUTED).next_to(desc1,DOWN,buff=.55).shift(RIGHT*2.3)
+        self.play(Write(formula),run_time=1.5); self.play(Create(hi),FadeIn(desc1),FadeIn(desc2),run_time=1.2); self.play(FadeIn(desc3)); self.wait(3)
+        self.finish_voice(2)

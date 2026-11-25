@@ -1,0 +1,3 @@
+The derivative definition describes that shrinking process. The prime in f prime of x means the instantaneous rate of change at input x. The letter h is a small step in the input: we move from x to the nearby input x plus h. The output change is f of x plus h minus f of x. Divide by h, the input change, and we have a secant slope.
+
+The limit as h approaches zero asks what that slope approaches as the step gets smaller. We do not set h to zero in the fraction, because that would divide by zero. Instead, we examine nonzero steps as close to zero as we like. If the slopes approach a value, that value is the tangent slope, or f prime of x. The green tangent shows the curve's instantaneous rise at the marked input.

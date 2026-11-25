@@ -1,0 +1,10 @@
+media/
+work/
+venv/
+.venv/
+python/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+outputs/derivative_rate_of_change_source.zip

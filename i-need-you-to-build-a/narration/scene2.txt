@@ -1,0 +1,3 @@
+A function is a rule that turns an input into an output. Here f of x equals x squared. Put in two, square it, and the output is four: f of two equals four.
+
+If the input changes from a to b, the output changes from f of a to f of b. Average rate of change is output change divided by input change: f of b minus f of a, over b minus a. The numerator is the vertical change; the denominator is the horizontal change. Their ratio is the slope between the two points. So a and b are the starting and ending inputs, while f of a and f of b are their outputs. This describes change across an interval, not at one instant.
